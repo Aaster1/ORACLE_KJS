@@ -1,32 +1,32 @@
--- Ä¿¼­ ½ÇÇà ´ÜÃàÅ° : ctrl + enter
--- ¹®¼­ ÀüÃ¼ ½ÇÇà : F5
+-- ì»¤ì„œ ì‹¤í–‰ ë‹¨ì¶•í‚¤ : ctrl + enter
+-- ë¬¸ì„œ ì „ì²´ ì‹¤í–‰ : F5
+--jjins
 
+--1. ê³„ì • ì ‘ì† ëª…ë ¹ì–´
+--conn ê³„ì •ëª…/ë¹„ë°€ë²ˆí˜¸;
 
---1. °èÁ¤ Á¢¼Ó ¸í·É¾î
---conn °èÁ¤¸í/ºñ¹Ð¹øÈ£;
-
---2. SQLÀº ´ë/¼Ò¹®ÀÚ ±¸ºÐÀÌ ¾øÀÌ ÀÎ½Ä
---¸í·É¾î Å°¿öµå ´ë¹®ÀÚ, ½Äº°ÀÚ´Â ¼Ò¹®ÀÚ·Î ·çÁ¶ »ç¿ëµÊ (½ºÅ¸ÀÏ´ë·Î)
+--2. SQLì€ ëŒ€/ì†Œë¬¸ìž êµ¬ë¶„ì´ ì—†ì´ ì¸ì‹
+--ëª…ë ¹ì–´ í‚¤ì›Œë“œ ëŒ€ë¬¸ìž, ì‹ë³„ìžëŠ” ì†Œë¬¸ìžë¡œ ë£¨ì¡° ì‚¬ìš©ë¨ (ìŠ¤íƒ€ì¼ëŒ€ë¡œ)
 SELECT user_id, username
 FROM all_users;
---WHERE username = 'HR';        <- HR°èÁ¤ÀÌ ¾ø±â ¶§¹®¿¡ »ç¿ëºÒ°¡
+--WHERE username = 'HR';        <- HRê³„ì •ì´ ì—†ê¸° ë•Œë¬¸ì— ì‚¬ìš©ë¶ˆê°€
 
---3.HR°èÁ¤ »ý¼º
+--3.HRê³„ì • ìƒì„±
 
---À¯ÀÇ »çÇ×
---11g¹öÀü ÀÌÇÏ : ¾î¶² ÀÌ¸§À¸·Îµµ °èÁ¤ »ý¼º °¡´É
---12g¹öÀü ÀÌ»ó : 'c##'ÀÌ¶ó´Â Á¢µÎ¾î¸¦ ºÙ¿©¼­ °èÁ¤À» »ý¼ºÇÏµµ·Ï Á¤ÇØ³õÀ½.
---ÇÏÁö¸¸ c##ºÙÀÌ¸é °Å½½¸®ÀÝ¾Æ? ¾øÀÌ »ý¼ºÇÏ´Â¹æ¹ý!
+--ìœ ì˜ ì‚¬í•­
+--11gë²„ì „ ì´í•˜ : ì–´ë–¤ ì´ë¦„ìœ¼ë¡œë„ ê³„ì • ìƒì„± ê°€ëŠ¥
+--12gë²„ì „ ì´ìƒ : 'c##'ì´ë¼ëŠ” ì ‘ë‘ì–´ë¥¼ ë¶™ì—¬ì„œ ê³„ì •ì„ ìƒì„±í•˜ë„ë¡ ì •í•´ë†“ìŒ.
+--í•˜ì§€ë§Œ c##ë¶™ì´ë©´ ê±°ìŠ¬ë¦¬ìž–ì•„? ì—†ì´ ìƒì„±í•˜ëŠ”ë°©ë²•!
 --ALTER SESSION SET "_ORACLE_SCRIPT" = TRUE;
 
---Å×ÀÌºí ½ºÆäÀÌ½º º¯°æ
--- = HR °èÁ¤ÀÇ ±âº» Å×ÀÌºí ¿µ¿ªÀ» 'users' ¿µ¿ªÀ¸·Î ÁöÁ¤
+--í…Œì´ë¸” ìŠ¤íŽ˜ì´ìŠ¤ ë³€ê²½
+-- = HR ê³„ì •ì˜ ê¸°ë³¸ í…Œì´ë¸” ì˜ì—­ì„ 'users' ì˜ì—­ìœ¼ë¡œ ì§€ì •
 
---°èÁ¤ÀÌ »ç¿ëÇÒ ¼ö ÀÖ´Â ¿ë·® ¼³Á¤
--- = HR°èÁ¤ÀÇ »ç¿ë ¿ë·®À» ¹«ÇÑ´ë·Î ÁöÁ¤
+--ê³„ì •ì´ ì‚¬ìš©í•  ìˆ˜ ìžˆëŠ” ìš©ëŸ‰ ì„¤ì •
+-- = HRê³„ì •ì˜ ì‚¬ìš© ìš©ëŸ‰ì„ ë¬´í•œëŒ€ë¡œ ì§€ì •
 
---°èÁ¤¿¡ ±ÇÇÑÀ» ºÎ¿©
---GRANT ±ÇÇÑ¸í1,±ÇÇÑ¸í2 TO °èÁ¤¸í;
+--ê³„ì •ì— ê¶Œí•œì„ ë¶€ì—¬
+--GRANT ê¶Œí•œëª…1,ê¶Œí•œëª…2 TO ê³„ì •ëª…;
 
 
 ALTER SESSION SET "_ORACLE_SCRIPT" = TRUE;
@@ -36,94 +36,94 @@ ALTER USER HR QUOTA UNLIMITED ON users;
 GRANT connect, resource TO HR;
 
 
---°èÁ¤ »èÁ¦
---DROP USER °èÁ¤¸í [CASCADE];
---°èÁ¤ Àá±Ý ÇØÁ¦
---ALTER USER °èÁ¤¸í ACCOUNT UNLOCK;
+--ê³„ì • ì‚­ì œ
+--DROP USER ê³„ì •ëª… [CASCADE];
+--ê³„ì • ìž ê¸ˆ í•´ì œ
+--ALTER USER ê³„ì •ëª… ACCOUNT UNLOCK;
 
 ALTER USER HR ACCOUNT UNLOCK;
 DROP USER HR CASCADE;
 
---HR»ùÇÃ ½ºÅ°¸¶(µ¥ÀÌÅÍ) °¡Á®¿À±â
+--HRìƒ˜í”Œ ìŠ¤í‚¤ë§ˆ(ë°ì´í„°) ê°€ì ¸ì˜¤ê¸°
 --1. SQLPLUS
---2. HR °èÁ¤ Á¢¼Ó
---3. ¸í·É¾î ÀÔ·Â
---  @[°æ·Î]/hr_main.sql
-    --@ : ¿À¶óÅ¬ÀÌ ¼³Ä¡µÈ ±âº» °æ·Î
+--2. HR ê³„ì • ì ‘ì†
+--3. ëª…ë ¹ì–´ ìž…ë ¥
+--  @[ê²½ë¡œ]/hr_main.sql
+    --@ : ì˜¤ë¼í´ì´ ì„¤ì¹˜ëœ ê¸°ë³¸ ê²½ë¡œ
     -- @ ? /demo / schema / human_resources / hr_main.sql
---4. 123456[ºñ¹Ð¹øÈ£]
+--4. 123456[ë¹„ë°€ë²ˆí˜¸]
 --5. users [tablespace]
 --6. temp[temp tablespace]
---7. [log °æ·Î] - @ ? /demo / schema / log
+--7. [log ê²½ë¡œ] - @ ? /demo / schema / log
 
 C:\Users\tj-bu\Desktop\aster\WINDOWS.X64_193000_db_home\demo\schema\human_resources/hr_main.sql
 
 SELECT * FROM EMP;
 
---HR»ùÇÃ ½ºÅ°¸¶(µ¥ÀÌÅÍ) °¡Á®¿À±â
+--HRìƒ˜í”Œ ìŠ¤í‚¤ë§ˆ(ë°ì´í„°) ê°€ì ¸ì˜¤ê¸°
 --1. SQLPLUS
---2. HR °èÁ¤ Á¢¼Ó
---3. ¸í·É¾î ÀÔ·Â
---  @[°æ·Î]/hr_main.sql
-    --@ : ¿À¶óÅ¬ÀÌ ¼³Ä¡µÈ ±âº» °æ·Î
+--2. HR ê³„ì • ì ‘ì†
+--3. ëª…ë ¹ì–´ ìž…ë ¥
+--  @[ê²½ë¡œ]/hr_main.sql
+    --@ : ì˜¤ë¼í´ì´ ì„¤ì¹˜ëœ ê¸°ë³¸ ê²½ë¡œ
     -- @ ? /demo / schema / human_resources / hr_main.sql
---4. 123456[ºñ¹Ð¹øÈ£]
+--4. 123456[ë¹„ë°€ë²ˆí˜¸]
 --5. users [tablespace]
 --6. temp[temp tablespace]
---7. [log °æ·Î] - @ ? /demo / schema / log
+--7. [log ê²½ë¡œ] - @ ? /demo / schema / log
 
 -- C:\Users\tj-bu\Desktop\aster\WINDOWS.X64_193000_db_home\demo\schema\human_resources/hr_main.sql
 
---°£´ÜÇÏ°Ô Å×ÀÌºí ±¸Á¶¸¦ È®ÀÎÇÏ´Â ¹æ¹ý
+--ê°„ë‹¨í•˜ê²Œ í…Œì´ë¸” êµ¬ì¡°ë¥¼ í™•ì¸í•˜ëŠ” ë°©ë²•
 DESC employees;
 
---»ç¿ø ID¿Í ÀÌ¸§À» Á¶È¸ÇÏ´Â SQL¹®
+--ì‚¬ì› IDì™€ ì´ë¦„ì„ ì¡°íšŒí•˜ëŠ” SQLë¬¸
 SELECT employee_id,first_name
 FROM employees;
 
---¶ç¾î¾²±â°¡ ¾øÀ¸¸é, µû¿ÈÇ¥ »ý·«°¡´É ex) exployee_id AS »ç¿ø ¹øÈ£ (x) -> »ç¿ø¹øÈ£(o)
--- AS µµ »ý·« °¡´É ex) employee_id »ç¿ø¹øÈ£
-SELECT employee_id AS »ç¿ø¹øÈ£
-,first_name AS ÀÌ¸§
-,last_name AS ¼º
-,email AS ÀÌ¸ÞÀÏ
-,phone_number AS ÀüÈ­¹øÈ£
-,hire_date AS ÀÔ»çÀÏÀÚ
-,salary AS ±Þ¿©
+--ë„ì–´ì“°ê¸°ê°€ ì—†ìœ¼ë©´, ë”°ì˜´í‘œ ìƒëžµê°€ëŠ¥ ex) exployee_id AS ì‚¬ì› ë²ˆí˜¸ (x) -> ì‚¬ì›ë²ˆí˜¸(o)
+-- AS ë„ ìƒëžµ ê°€ëŠ¥ ex) employee_id ì‚¬ì›ë²ˆí˜¸
+SELECT employee_id AS ì‚¬ì›ë²ˆí˜¸
+,first_name AS ì´ë¦„
+,last_name AS ì„±
+,email AS ì´ë©”ì¼
+,phone_number AS ì „í™”ë²ˆí˜¸
+,hire_date AS ìž…ì‚¬ì¼ìž
+,salary AS ê¸‰ì—¬
 FROM employees;
 
---Áßº¹Á¦°Å = DISTINCT
---job_id¸¦ Áßº¹µÈ µ¥ÀÌÅÍ¸¦ Á¦°ÅÇÏ°í Á¶ÈñÇÏ´Â SQL¹®À» ÀÛ¼ºÇÏ½Ã¿À
+--ì¤‘ë³µì œê±° = DISTINCT
+--job_idë¥¼ ì¤‘ë³µëœ ë°ì´í„°ë¥¼ ì œê±°í•˜ê³  ì¡°í¬í•˜ëŠ” SQLë¬¸ì„ ìž‘ì„±í•˜ì‹œì˜¤
 SELECT DISTINCT job_id
 FROM employees;
 
---Á¶°Ç = WHERE
---±Þ¿©°¡ 6000À» ÃÊ°úÇÏ´Â »ç¿øÀÇ ¸ðµç ÄÃ·³À» Á¶È¸ÇÏ½Ã¿À
+--ì¡°ê±´ = WHERE
+--ê¸‰ì—¬ê°€ 6000ì„ ì´ˆê³¼í•˜ëŠ” ì‚¬ì›ì˜ ëª¨ë“  ì»¬ëŸ¼ì„ ì¡°íšŒí•˜ì‹œì˜¤
 select *
 FROM employees
 WHERE salary > 6000;
 
---±Þ¿©°¡ 10000ÀÎ »ç¿øÀÇ ¸ðµç ÄÃ·³À» Á¶È¸ÇÏ´Â SQL¹®À» ÀÛ¼ºÇÏ½Ã¿À
+--ê¸‰ì—¬ê°€ 10000ì¸ ì‚¬ì›ì˜ ëª¨ë“  ì»¬ëŸ¼ì„ ì¡°íšŒí•˜ëŠ” SQLë¬¸ì„ ìž‘ì„±í•˜ì‹œì˜¤
 SELECT *
 FROM employees
 WHERE salary = 10000;
 
---³»¸²Â÷¼ø Á¤·Ä = ORDER BY ¼Ó¼º¸í DESC.
---¿À¸§Â÷¼ø Á¤·Ä = ORDER BY ¼Ó¼º¸í  ¶Ç´Â   ORDER BY ¼Ó¼º¸í ASC
---Á¤·Ä ¼ø¼­ = 1Â÷ÀûÀ¸·Î Á¤·ÄÇÒ °ÍÀ» ¸ÕÀú, °°Àº °ª¿¡ ´ëÇÑ 2Â÷ Á¤·ÄÀ» ±× ´ÙÀ½
--- ex) ORDER ¼Ó¼º1 Á¤·Ä¿É¼Ç, ¼Ó¼º2 Á¤·Ä¿É¼Ç
---¸ðµç ¼Ó¼ºµéÀ» salary¸¦ ±âÁØÀ¸·Î ³»¸²Â÷¼ø Á¤·ÄÇÏ°í, first_nameÀ» ±âÁØÀ¸·Î ¿À¸§Â÷¼ø Á¤·ÄÇÏ¿© SQL¹®À» ÀÛ¼ºÇÏ½Ã¿À
+--ë‚´ë¦¼ì°¨ìˆœ ì •ë ¬ = ORDER BY ì†ì„±ëª… DESC.
+--ì˜¤ë¦„ì°¨ìˆœ ì •ë ¬ = ORDER BY ì†ì„±ëª…  ë˜ëŠ”   ORDER BY ì†ì„±ëª… ASC
+--ì •ë ¬ ìˆœì„œ = 1ì°¨ì ìœ¼ë¡œ ì •ë ¬í•  ê²ƒì„ ë¨¼ì €, ê°™ì€ ê°’ì— ëŒ€í•œ 2ì°¨ ì •ë ¬ì„ ê·¸ ë‹¤ìŒ
+-- ex) ORDER ì†ì„±1 ì •ë ¬ì˜µì…˜, ì†ì„±2 ì •ë ¬ì˜µì…˜
+--ëª¨ë“  ì†ì„±ë“¤ì„ salaryë¥¼ ê¸°ì¤€ìœ¼ë¡œ ë‚´ë¦¼ì°¨ìˆœ ì •ë ¬í•˜ê³ , first_nameì„ ê¸°ì¤€ìœ¼ë¡œ ì˜¤ë¦„ì°¨ìˆœ ì •ë ¬í•˜ì—¬ SQLë¬¸ì„ ìž‘ì„±í•˜ì‹œì˜¤
 SELECT *
 FROM employees
 ORDER BY salary DESC,first_name;
 
---Á¶°ÇÀý¿¡¼­ÀÇ °°Àº ¼Ó¼º¸í¿¡ ´ëÇØ ORÀ» ¼öÇàÇÒ ¶§¿¡´Â INÀ¸·Î ¹­¾îÁÙ ¼ö ÀÖ´Ù.
+--ì¡°ê±´ì ˆì—ì„œì˜ ê°™ì€ ì†ì„±ëª…ì— ëŒ€í•´ ORì„ ìˆ˜í–‰í•  ë•Œì—ëŠ” INìœ¼ë¡œ ë¬¶ì–´ì¤„ ìˆ˜ ìžˆë‹¤.
 
 SELECT *
 FROM employees
 WHERE job_id in ('FI_ACCOUNT','IT_PROG');
 
---or »ç¿ë½Ã
+--or ì‚¬ìš©ì‹œ
 
 SELECT *
 FROM employees
@@ -131,69 +131,69 @@ WHERE job_id = 'FI_ACCOUNT'
 OR job_id = 'IT_PROG';
 
 
--- ~°¡ ¾Æ´Ñ °æ¿ì´Â ¼Ó¼º¸í ¾Õ¿¡ NOT¸¦ ºÙÀÓÀ¸·Î½á ¹ÝÀü½ÃÄÑÁØ´Ù.
---job_id°¡ 'FI_ACCOUNT'ÀÌ°Å³ª'IT_PROG'°¡ ¾Æ´Ñ »ç¿øÀÇ ¸ðµç ÄÃ·³ Á¶È¸
+-- ~ê°€ ì•„ë‹Œ ê²½ìš°ëŠ” ì†ì„±ëª… ì•žì— NOTë¥¼ ë¶™ìž„ìœ¼ë¡œì¨ ë°˜ì „ì‹œì¼œì¤€ë‹¤.
+--job_idê°€ 'FI_ACCOUNT'ì´ê±°ë‚˜'IT_PROG'ê°€ ì•„ë‹Œ ì‚¬ì›ì˜ ëª¨ë“  ì»¬ëŸ¼ ì¡°íšŒ
 
 SELECT *
 FROM employees
 WHERE NOT job_id IN ('FI_ACCOUNT','IT_PROG');
 
---job_id°¡ 'IT_PROG'ÀÌ¸é¼­ salary°¡ 6000ÀÌ»óÀÎ »ç¿øÀÇ ¸ðµç ÄÃ·³ Á¶È¸
+--job_idê°€ 'IT_PROG'ì´ë©´ì„œ salaryê°€ 6000ì´ìƒì¸ ì‚¬ì›ì˜ ëª¨ë“  ì»¬ëŸ¼ ì¡°íšŒ
 SELECT *
 FROM employees
 WHERE job_id = 'IT_PROG'
 AND salary >= 6000;
 
---first_nameÀÌ 'S'·Î ½ÃÀÛÇÏ´Â »ç¿øÀÇ ¸ðµç ÄÃ·³ Á¶È¸
---¿ÍÀÏµå Ä«µå´Â Á¶°ÇÀý¿¡¼­ LIKE¿Í ÇÔ²² »ç¿ë ex) LIKE '_c%'
+--first_nameì´ 'S'ë¡œ ì‹œìž‘í•˜ëŠ” ì‚¬ì›ì˜ ëª¨ë“  ì»¬ëŸ¼ ì¡°íšŒ
+--ì™€ì¼ë“œ ì¹´ë“œëŠ” ì¡°ê±´ì ˆì—ì„œ LIKEì™€ í•¨ê»˜ ì‚¬ìš© ex) LIKE '_c%'
 SELECT *
 FROM employees
 WHERE first_name LIKE 'S%';
 
---frist_nameÀÌ 's'·Î ³¡³ª´Â »ç¿øÀÇ ¸ðµç Ä®·³À» Á¶È¸
+--frist_nameì´ 's'ë¡œ ëë‚˜ëŠ” ì‚¬ì›ì˜ ëª¨ë“  ì¹¼ëŸ¼ì„ ì¡°íšŒ
 SELECT *
 FROM employees
 WHERE first_name LIKE '%s';
 
---first_name¿¡ 's'°¡ Æ÷ÇÔµÇ´Â »ç¿øÀÇ ¸ðµç ÄÃ·³À» Á¶È¸
+--first_nameì— 's'ê°€ í¬í•¨ë˜ëŠ” ì‚¬ì›ì˜ ëª¨ë“  ì»¬ëŸ¼ì„ ì¡°íšŒ
 SELECT *
 FROM employees
 WHERE first_name LIKE '%s%';
 
---first_nameÀÌ 5±ÛÀÚÀÎ »ç¿øÀÇ ¸ðµç ÄÃ·³À» Á¶È¸
+--first_nameì´ 5ê¸€ìžì¸ ì‚¬ì›ì˜ ëª¨ë“  ì»¬ëŸ¼ì„ ì¡°íšŒ
 SELECT *
 FROM employees
 WHERE first_name LIKE'_____'
 ;
 --or
---´ÜÀÏÇà ÇÔ¼ö legnth()»ç¿ë
+--ë‹¨ì¼í–‰ í•¨ìˆ˜ legnth()ì‚¬ìš©
 SELECT *
 FROM employees
 WHERE length(first_name) =2;
 
---nullÀÇ °æ¿ì´Â ¼Ó¼º¸í = nullÀÌ ¾Æ´Ñ, ¼Ó¼º¸í IN NULLÀ» »ç¿ë
---COMMISSION_PCT°¡ nullÀÎ »ç¿øÀÇ ¸ðµç ÄÃ·³À» Á¶È¸
+--nullì˜ ê²½ìš°ëŠ” ì†ì„±ëª… = nullì´ ì•„ë‹Œ, ì†ì„±ëª… IN NULLì„ ì‚¬ìš©
+--COMMISSION_PCTê°€ nullì¸ ì‚¬ì›ì˜ ëª¨ë“  ì»¬ëŸ¼ì„ ì¡°íšŒ
 SELECT *
 FROM employees
 WHERE COMMISSION_PCT IS NULL;
 
---nullÀÌ ¾Æ´Ñ °æ¿ì´Â NOT ¼Ó¼º¸í = nullÀÌ ¾Æ´Ñ ¼Ó¼º¸í IS NOT NULLÀ» »ç¿ë
---COMMISSION_PCT°¡ NULLÀÌ ¾Æ´Ñ »ç¿øÀÇ ¸ðµç ÄÃ·³À» Á¶È¸
+--nullì´ ì•„ë‹Œ ê²½ìš°ëŠ” NOT ì†ì„±ëª… = nullì´ ì•„ë‹Œ ì†ì„±ëª… IS NOT NULLì„ ì‚¬ìš©
+--COMMISSION_PCTê°€ NULLì´ ì•„ë‹Œ ì‚¬ì›ì˜ ëª¨ë“  ì»¬ëŸ¼ì„ ì¡°íšŒ
 SELECT *
 FROM employees
 WHERE COMMISSION_PCT IS NOT NULL;
 
---DATEÅ¸ÀÔÀÇ °æ¿ì, TO_CHAR()ÇÔ¼ö·Î Æ÷¸ËÇÏ¸ç WHEREÀý¿¡¼­ ºñ±³°¡´É
---¿À¶óÅ¬ Æ÷¸Ë ¹æ¹ý : TO_CHAR(µ¥ÀÌÆ® °ª,'º¯È¯ÇÒ ¹®ÀÚÇüÅÂ')
---mysql Æ÷¸Ë ¹æ¹ý : DATE_FORMAT(µ¥ÀÌÆ® °ª, 'º¯È¯ÇÒ ¹®ÀÚÇüÅÂ')
---sqlServer Æ÷¸Ë ¹æ¹ý : CONVERT(µ¥ÀÌÆ® °ª, 101<mm/dd/yyyy>or 120<yyyy-MM-dd HH:mm:ss>
+--DATEíƒ€ìž…ì˜ ê²½ìš°, TO_CHAR()í•¨ìˆ˜ë¡œ í¬ë§·í•˜ë©° WHEREì ˆì—ì„œ ë¹„êµê°€ëŠ¥
+--ì˜¤ë¼í´ í¬ë§· ë°©ë²• : TO_CHAR(ë°ì´íŠ¸ ê°’,'ë³€í™˜í•  ë¬¸ìží˜•íƒœ')
+--mysql í¬ë§· ë°©ë²• : DATE_FORMAT(ë°ì´íŠ¸ ê°’, 'ë³€í™˜í•  ë¬¸ìží˜•íƒœ')
+--sqlServer í¬ë§· ë°©ë²• : CONVERT(ë°ì´íŠ¸ ê°’, 101<mm/dd/yyyy>or 120<yyyy-MM-dd HH:mm:ss>
 --103<dd/MM/yyyy> or 126<yyyy-MM-ddTHH:mm:ss.sss> or 12<yy/MM/dd>
---hire_date °¡ 04³â ÀÌ»óÀÎ ¸ðµç ÄÃ·³À» Á¶È¸
+--hire_date ê°€ 04ë…„ ì´ìƒì¸ ëª¨ë“  ì»¬ëŸ¼ì„ ì¡°íšŒ
 SELECT *
 FROM employees
 WHERE TO_CHAR(hire_date,'YY') >=04;
 
---¶Ç´Â
+--ë˜ëŠ”
 
 SELECT *
 FROM employees
@@ -201,53 +201,53 @@ WHERE hire_date>=TO_DATE('20040101','yyyyMMDD')
 ;
 
 
---¶Ç´Â
+--ë˜ëŠ”
 
 SELECT *
 FROM employees
-WHERE hire_date >= '04/01/01'       --SQL DEVELOPER¿¡¼­ ¹®ÀÚÇü µ¥ÀÌÅÍ¸¦ DATE·Î ÀÚµ¿º¯È¯ÇÔ
+WHERE hire_date >= '04/01/01'       --SQL DEVELOPERì—ì„œ ë¬¸ìží˜• ë°ì´í„°ë¥¼ DATEë¡œ ìžë™ë³€í™˜í•¨
 ;
---Á¶°ÇÀý¿¡¼­ ~¿¡¼­ ~ »çÀÌÀÎ °æ¿ì ¼Ó¼º¸í BETWEEN ÃÖ¼Ò¹üÀ§ºñ±³¼Ó¼º NAD ÃÖ´ë¹üÀ§ºñ±³¼Ó¼º
---hire_date °¡ 04³âµµºÎÅÍ 05³âµµÀÎ ¸ðµç ÄÃ·³À» Á¶È¸
+--ì¡°ê±´ì ˆì—ì„œ ~ì—ì„œ ~ ì‚¬ì´ì¸ ê²½ìš° ì†ì„±ëª… BETWEEN ìµœì†Œë²”ìœ„ë¹„êµì†ì„± NAD ìµœëŒ€ë²”ìœ„ë¹„êµì†ì„±
+--hire_date ê°€ 04ë…„ë„ë¶€í„° 05ë…„ë„ì¸ ëª¨ë“  ì»¬ëŸ¼ì„ ì¡°íšŒ
 SELECT *
 FROM employees
 WHERE TO_CHAR(hire_date,'yy') BETWEEN 04 AND 05;
 
---ÇØ´ç ÀÚ¸®¼ö¿¡¼­ ¿Ã¸² ¹ß»ý½ÃÅ°´Â ´ÜÀÏÇàÇÔ¼ö = CEIL(¼ýÀÚ,¿Ã¸²¹ß»ý¹Ý¿µÀ§Ä¡)
---12.45,-12.45 º¸´Ù Å©°Å³ª °°Àº Á¤¼ö Áß Á¦ÀÏ ÀÛÀº ¼ö¸¦ °è»êÇÏ´Â SQL¹®À» °¢°¢ ÀÛ¼ºÇÏ½Ã¿À.
+--í•´ë‹¹ ìžë¦¬ìˆ˜ì—ì„œ ì˜¬ë¦¼ ë°œìƒì‹œí‚¤ëŠ” ë‹¨ì¼í–‰í•¨ìˆ˜ = CEIL(ìˆ«ìž,ì˜¬ë¦¼ë°œìƒë°˜ì˜ìœ„ì¹˜)
+--12.45,-12.45 ë³´ë‹¤ í¬ê±°ë‚˜ ê°™ì€ ì •ìˆ˜ ì¤‘ ì œì¼ ìž‘ì€ ìˆ˜ë¥¼ ê³„ì‚°í•˜ëŠ” SQLë¬¸ì„ ê°ê° ìž‘ì„±í•˜ì‹œì˜¤.
 SELECT CEIL(12.45),CEIL(-12.45)
 FROM DUAL
 ;
 
---ÇØ´ç ÀÚ¸®¿¡¼­ ³»¸²À» ¹ß»ý½ÃÅ°´Â ´ÜÀÏÇàÇÔ¼ö = FLOOR(¼ýÀÚ,³»¸²¹ß»ý¹Ý¿µÀ§Ä¡)
---12.55,-12.55 º¸´Ù ÀÛ°Å³ª °°Àº Á¤¼ö Áß °¡Àå Å« ¼ö¸¦ °è»êÇÏ´Â SQL¹®
+--í•´ë‹¹ ìžë¦¬ì—ì„œ ë‚´ë¦¼ì„ ë°œìƒì‹œí‚¤ëŠ” ë‹¨ì¼í–‰í•¨ìˆ˜ = FLOOR(ìˆ«ìž,ë‚´ë¦¼ë°œìƒë°˜ì˜ìœ„ì¹˜)
+--12.55,-12.55 ë³´ë‹¤ ìž‘ê±°ë‚˜ ê°™ì€ ì •ìˆ˜ ì¤‘ ê°€ìž¥ í° ìˆ˜ë¥¼ ê³„ì‚°í•˜ëŠ” SQLë¬¸
 SELECT FLOOR(12.55),FLOOR(-12.55)
 FROM DUAL
 ;
 
---¹Ý¿Ã¸² ´ÜÀÏÇàÇÔ¼ö = ROUND(¼ýÀÚ, ¹ß»ý¹Ý¿µÀ§Ä¡) <-¿©±â±îÁö¸¸ º¸ÀÌ°Ô ÇÏ°Ú´Ù´Â À§Ä¡
---0.54 ¼Ò¼ö Ã¹Â°ÀÚ¸® ¹Ý¿Ã¸²
+--ë°˜ì˜¬ë¦¼ ë‹¨ì¼í–‰í•¨ìˆ˜ = ROUND(ìˆ«ìž, ë°œìƒë°˜ì˜ìœ„ì¹˜) <-ì—¬ê¸°ê¹Œì§€ë§Œ ë³´ì´ê²Œ í•˜ê² ë‹¤ëŠ” ìœ„ì¹˜
+--0.54 ì†Œìˆ˜ ì²«ì§¸ìžë¦¬ ë°˜ì˜¬ë¦¼
 SELECT ROUND(0.54,0)
 FROM DUAL
 ;
 
---0.54 ¼Ò¼ö µÑÂ°ÀÚ¸® ¹Ý¿Ã¸²
+--0.54 ì†Œìˆ˜ ë‘˜ì§¸ìžë¦¬ ë°˜ì˜¬ë¦¼
 SELECT ROUND(0.54,1)
 FROM DUAL
 ;
 
---125.67À» 1ÀÇ ÀÚ¸®¿¡¼­ ¹Ý¿Ã¸²
-SELECT ROUND(125.67,-1) --¸¶ÀÌ³Ê½º·Î ÁøÇà
+--125.67ì„ 1ì˜ ìžë¦¬ì—ì„œ ë°˜ì˜¬ë¦¼
+SELECT ROUND(125.67,-1) --ë§ˆì´ë„ˆìŠ¤ë¡œ ì§„í–‰
 FROM DUAL
 ;
 
---125.67À» 10ÀÇ ÀÚ¸®¿¡¼­ ¹Ý¿Ã¸²
+--125.67ì„ 10ì˜ ìžë¦¬ì—ì„œ ë°˜ì˜¬ë¦¼
 SELECT ROUND(125.67,-2)
 FROM DUAL
 ;
 
---'³ª¸ÓÁö'¸¦ ±¸ÇÏ´Â ´ÜÀÏÇà ÇÔ¼ö = MOD(´çÇÏ´Â °ª, ³ª´­ °ª)
---3À» 8·Î ³ª´« ³ª¸ÓÁö ±¸ÇÏ½Ã¿À
+--'ë‚˜ë¨¸ì§€'ë¥¼ êµ¬í•˜ëŠ” ë‹¨ì¼í–‰ í•¨ìˆ˜ = MOD(ë‹¹í•˜ëŠ” ê°’, ë‚˜ëˆŒ ê°’)
+--3ì„ 8ë¡œ ë‚˜ëˆˆ ë‚˜ë¨¸ì§€ êµ¬í•˜ì‹œì˜¤
 SELECT MOD(3,8)
 FROM DUAL
 ;
@@ -256,45 +256,45 @@ SELECT MOD(30,4)
 FROM DUAL
 ;
 
---Á¦°öÀ» ±¸ÇÏ´Â ´ÜÀÏÇà ÇÔ¼ö = POWER(Á¦°öÇÒ ¼ö, ÀÎ¼ö)
---2ÀÇ 10Á¦°ö
+--ì œê³±ì„ êµ¬í•˜ëŠ” ë‹¨ì¼í–‰ í•¨ìˆ˜ = POWER(ì œê³±í•  ìˆ˜, ì¸ìˆ˜)
+--2ì˜ 10ì œê³±
 SELECT power(2,10)
 FROM DUAL
 ;
 
---2ÀÇ 31Á¦°ö
+--2ì˜ 31ì œê³±
 SELECT POWER(2,31)
 FROM DUAL
 ;
 
---Á¦°ö±ÙÀ» ±¸ÇÏ´Â ´ÜÀÏÇàÇÔ¼ö = SQRT(¼ö)
---2ÀÇ Á¦°ö±Ù
+--ì œê³±ê·¼ì„ êµ¬í•˜ëŠ” ë‹¨ì¼í–‰í•¨ìˆ˜ = SQRT(ìˆ˜)
+--2ì˜ ì œê³±ê·¼
 SELECT SQRT(2)
 FROM DUAL
 ;
 
---100ÀÇ Á¦°ö±Ù
+--100ì˜ ì œê³±ê·¼
 SELECT SQRT(100)
 FROM DUAL
 ;
 
---Æ¯Á¤ À§Ä¡¸¦ Àý»èÇÏ´Â ´ÜÀÏÇÜÇÔ¼ö = TRUNC(¼ýÀÚ,Àß¶ó¹ö¸±À§Ä¡)
---527425.1234¸¦ ¼Ò¼öÁ¡ Ã¹Â° ÀÚ¸®¿¡¼­ Àý»è
+--íŠ¹ì • ìœ„ì¹˜ë¥¼ ì ˆì‚­í•˜ëŠ” ë‹¨ì¼í–„í•¨ìˆ˜ = TRUNC(ìˆ«ìž,ìž˜ë¼ë²„ë¦´ìœ„ì¹˜)
+--527425.1234ë¥¼ ì†Œìˆ˜ì  ì²«ì§¸ ìžë¦¬ì—ì„œ ì ˆì‚­
 SELECT TRUNC(527425.1234,1)
 FROM DUAL
 ;
 
---527425.1234¸¦ ¼Ò¼öÁ¡ µÑÂ° ÀÚ¸®¿¡¼­ Àý»è
+--527425.1234ë¥¼ ì†Œìˆ˜ì  ë‘˜ì§¸ ìžë¦¬ì—ì„œ ì ˆì‚­
 SELECT TRUNC(527425.1234,2)
 FROM DUAL
 ;
 
---527425.1234¸¦ 1ÀÇ ÀÚ¸®¿¡¼­ Àý»è
+--527425.1234ë¥¼ 1ì˜ ìžë¦¬ì—ì„œ ì ˆì‚­
 SELECT TRUNC(527425.1234,0)
 fROM DUAL
 ;
 
---527425.1234¸¦ 10ÀÇ ÀÚ¸®¿¡¼­ Àý»è
+--527425.1234ë¥¼ 10ì˜ ìžë¦¬ì—ì„œ ì ˆì‚­
 SELECT TRUNC(527425.1234,-1)
 FROM DUAL
 ;

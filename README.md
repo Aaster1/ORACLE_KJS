@@ -1,5 +1,5 @@
 # Oracle
-
+<span>
 -- 커서 실행 단축키 : ctrl + enter
 -- 문서 전체 실행 : F5
 --jjins
@@ -300,3 +300,4 @@ fROM DUAL
 SELECT TRUNC(527425.1234,-1)
 FROM DUAL
 ;
+</span>
